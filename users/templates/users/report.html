@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Lista de usuarios</h2>
+    <h3>Cantidad de registros : {{ count }}</h3>
+    <table border="1">
+        <thead>
+            <th>Nombres</th>
+            <th>Cedula</th>
+            <th>Telefono</th>
+            <th>Correo</th>
+            <th>Instagram</th>
+            <th>Factura</th>
+        </thead>
+        <tbody>
+            {% for user in users %}
+                <tr>                    
+                    <td>{{ user.nombre }}</td>
+                    <td>{{ user.cedula }}</td>
+                    <td>{{ user.telefono }}</td>
+                    <td>{{ user.correo }}</td>
+                    <td>{{ user.user_instagram }}</td>
+                    <td>{{ user.factura }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
