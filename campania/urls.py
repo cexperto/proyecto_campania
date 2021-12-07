@@ -18,9 +18,10 @@ from django.urls import path, include
 from users.views import UserRegisterList
 from django.conf import settings
 from django.conf.urls.static import static
-from users.views import ListUsers, FilterUser, ExportReport
+from users.views import ListUsers, FilterUser, ExportReport, home
 
 urlpatterns = [
+    path('', home),
     path('admin/', admin.site.urls),
     path('users/', UserRegisterList.as_view()),
     path('api/auth/', include(('customUser.urls','customUser'))),    

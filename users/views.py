@@ -12,6 +12,9 @@ from .utils import render_to_pdf
 from django.http import HttpResponse
 
 
+def home(request):
+    return HttpResponse("Welcome to the API!")
+
 class UserRegisterList(APIView):    
     # def get(self, request, format=None):
     #     users = Users.objects.all()
