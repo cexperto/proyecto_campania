@@ -9,15 +9,5 @@ class AllUserSerializer(serializers.ModelSerializer):
         model = Users
         fields= '__all__'
     
-    def to_representation(self, instance):
-        return {
-            "nombre": instance.nombre,            
-            "cedula": instance.cedula,
-            "telefono": instance.telefono,
-            "correo": instance.correo,
-            "user_instagram": instance.user_instagram,
-            "factura": instance.factura,
-            "img_factura": instance.img_factura
-        }
     
     

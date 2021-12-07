@@ -5,10 +5,11 @@
 __pycache__
 db.sqlite3
 media
-
+static
+migrations
 # Backup files # 
 *.bak 
-
+*.jpg
 # If you are using PyCharm # 
 # User-specific stuff
 .idea/**/workspace.xml

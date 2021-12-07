@@ -10,7 +10,7 @@ class Users(models.Model):
     correo = models.EmailField(max_length=200)
     user_instagram = models.CharField(max_length=200)
     factura = models.CharField(max_length=200)
-    img_factura = models.ImageField(blank='', upload_to='images')
+    img_factura = models.ImageField(upload_to='images')
     user_fk = models.ForeignKey(User, on_delete=models.PROTECT)
 
     class Meta:
