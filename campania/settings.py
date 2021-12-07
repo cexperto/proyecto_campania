@@ -65,7 +65,7 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware'
 ]
 
-ROOT_URLCONF = 'campaña.urls'
+ROOT_URLCONF = 'campania.urls'
 SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
 TEMPLATES = [
     {
@@ -83,7 +83,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'campaña.wsgi.application'
+WSGI_APPLICATION = 'campania.wsgi.application'
 
 
 # Database
