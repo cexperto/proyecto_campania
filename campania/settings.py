@@ -30,7 +30,7 @@ ALLOWED_HOSTS = ["*"]
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "http://brillaconfuerza.com"
+    "http://brillaconfuerza.com",
     "https://brillaconfuerza.com"
 ]
 
