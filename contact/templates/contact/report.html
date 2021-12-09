@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Lista de mensajes</h2>
+    <h3>Cantidad de registros : {{ count }}</h3>
+    <table border="1">
+        <thead>
+            <th>Nombre</th>
+            <th>Telefono</th>
+            <th>Correo</th>
+            <th>Mensaje</th>
+
+        </thead>
+        <tbody>
+            {% for contact in contacts %}
+                <tr>                    
+                    <td>{{ contact.nombre }}</td>                    
+                    <td>{{ contact.telefono }}</td>
+                    <td>{{ contact.correo }}</td>                    
+                    <td>{{ contact.mensaje }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

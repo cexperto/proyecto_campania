@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'users',
+    'contact',
 ]
 
 MIDDLEWARE = [
@@ -96,24 +97,18 @@ WSGI_APPLICATION = 'campania.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    'default':{
+        'ENGINE': 'django.db.backends.mysql',
+        'OPTIONS': {
+            'sql_mode': 'traditional',
+        },
+        'NAME': 'sys',
+        'HOST': 'database.ceejc0r3ra60.us-east-2.rds.amazonaws.com',
+        'PORT': '3306',
+        'USER': 'admin',
+        'PASSWORD': 'brillaconfuerzamuchafuerza',
     }
 }
-# DATABASES = {
-#     'default':{
-#         'ENGINE': 'django.db.backends.mysql',
-#         'OPTIONS': {
-#             'sql_mode': 'traditional',
-#         },
-#         'NAME': 'brillaco_api',
-#         'HOST': '67.202.2.172',
-#         'PORT': '3306',
-#         'USER': 'brillaco_api',
-#         'PASSWORD': '{xJ$[RCc{5Nh',
-#     }
-# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
