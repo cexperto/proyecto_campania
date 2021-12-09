@@ -1,1 +1,1 @@
-web: gunicorn campania.wsgi:application --log-file -
+web: gunicorn campania.wsgi
