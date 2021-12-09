@@ -161,13 +161,13 @@ MEDIA_ROOT = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static', 
 
 STATIC_ROOT = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static', 'static-only')
 
-STATICFILES_DIRS = (
-    os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static', 'static'),
-)
+# STATICFILES_DIRS = (
+#     os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static', 'static'),
+# )
 
-TEMPLATE_DIRS = (
-    os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static', 'templates'),
-)
+# TEMPLATE_DIRS = (
+#     os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static', 'templates'),
+# )
 
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
@@ -177,4 +177,4 @@ REST_FRAMEWORK = {
     
 }
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
