@@ -30,7 +30,8 @@ ALLOWED_HOSTS = ["*"]
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "https://brillaconfuerza.com",
+    "http://brillaconfuerza.com",
+    "https://brillaconfuerza.com"
 ]
 
 CORS_ALLOW_HEADERS = [
@@ -55,6 +56,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'users',
+    'contact',
 ]
 
 MIDDLEWARE = [
@@ -100,11 +102,11 @@ DATABASES = {
         'OPTIONS': {
             'sql_mode': 'traditional',
         },
-        'NAME': 'brillaco_api',
-        'HOST': 'localhost',
+        'NAME': 'sys',
+        'HOST': 'database.ceejc0r3ra60.us-east-2.rds.amazonaws.com',
         'PORT': '3306',
-        'USER': 'brillaco_api',
-        'PASSWORD': '{xJ$[RCc{5Nh',
+        'USER': 'admin',
+        'PASSWORD': 'brillaconfuerzamuchafuerza',
     }
 }
 

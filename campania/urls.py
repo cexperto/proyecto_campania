@@ -19,6 +19,7 @@ from users.views import UserRegisterList
 from django.conf import settings
 from django.conf.urls.static import static
 from users.views import ListUsers, FilterUser, ExportReport, home
+from contact.views import ContactRegister, ExportContactReport
 
 urlpatterns = [
     path('', home),
@@ -27,7 +28,9 @@ urlpatterns = [
     path('api/auth/', include(('customUser.urls','customUser'))),    
     path('allUsers/', ListUsers.as_view()),
     path('searchBill/', FilterUser.as_view()),
-    path('export/', ExportReport.as_view())
+    path('export/', ExportReport.as_view()),
+    path('contact/', ContactRegister.as_view()),
+    path('exportReport/', ExportContactReport.as_view())
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
