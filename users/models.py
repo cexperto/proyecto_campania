@@ -5,8 +5,8 @@ from django.contrib.auth.models import User
 class Users(models.Model):
     id_u = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=200)
-    cedula = models.IntegerField(unique=True)
-    telefono = models.IntegerField()
+    cedula = models.CharField(unique=True, max_length=200)
+    telefono = models.CharField(max_length=200)
     correo = models.EmailField(max_length=200)
     user_instagram = models.CharField(max_length=200)
     factura = models.CharField(max_length=200)

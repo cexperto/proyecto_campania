@@ -1,5 +1,6 @@
 from rest_framework.filters import SearchFilter
 from rest_framework.response import Response
+from rest_framework.serializers import Serializer
 from rest_framework.views import APIView
 from rest_framework import status
 
@@ -14,6 +15,8 @@ from users.utils import render_to_pdf
 
 
 class ContactRegister(generics.ListAPIView):
+    serializer_class = AllContactSerializer
+
     def get_queryset(self):
         try:
             contact = Contac.objects.filter(user_fk_id=self.request.user)
