@@ -31,7 +31,9 @@ ALLOWED_HOSTS = ["*"]
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://brillaconfuerza.com",
+    "http://brillaconfuerza.co",
     "https://brillaconfuerza.com"
+    "https://brillaconfuerza.co"
 ]
 
 CORS_ALLOW_HEADERS = [
