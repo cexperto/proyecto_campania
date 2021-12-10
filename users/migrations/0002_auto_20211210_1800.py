@@ -6,12 +6,17 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('contact', '0001_initial'),
+        ('users', '0001_initial'),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='contac',
+            model_name='users',
+            name='cedula',
+            field=models.CharField(max_length=200, unique=True),
+        ),
+        migrations.AlterField(
+            model_name='users',
             name='telefono',
             field=models.CharField(max_length=200),
         ),
