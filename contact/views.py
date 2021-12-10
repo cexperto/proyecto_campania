@@ -14,6 +14,7 @@ from users.utils import render_to_pdf
 
 
 class ContactRegister(generics.ListAPIView):
+    serializer_class = AllContactSerializer
     def get_queryset(self):
         try:
             contact = Contac.objects.filter(user_fk_id=self.request.user)
