@@ -6,12 +6,4 @@ class AllContactSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Contac
-        fields= '__all__'    
-    
-    def to_representation(self, instance):
-        return {
-            "nombre": instance.nombre,            
-            "telefono": instance.telefono,
-            "correo": instance.correo,
-            "mensaje": instance.mensaje
-        }
+        fields= '__all__' 
