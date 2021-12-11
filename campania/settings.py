@@ -32,7 +32,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://brillaconfuerza.com",
     "http://brillaconfuerza.co",
-    "https://brillaconfuerza.com"
+    "https://brillaconfuerza.com",
     "https://brillaconfuerza.co"
 ]
 
@@ -163,14 +163,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 STATIC_ROOT = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static', 'static-only')
 
-#STATICFILES_DIRS = (
- #    os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static', 'static'),
-#)
-
-#TEMPLATE_DIRS = (
-#     os.path.join(os.path.dirname(os.path.dirname(__file__)), 'static', 'templates'),
-#)
-
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
     'DEFAULT_AUTHENTICATION_CLASSES': [
@@ -180,3 +172,8 @@ REST_FRAMEWORK = {
 }
 
 # django_heroku.settings(locals())
+EMAIL_HOST = 'smtp.googlemail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'participasimonizco@gmail.com'
+EMAIL_HOST_PASSWORD = 'Simonizco.*'
+EMAIL_USE_TLS = True

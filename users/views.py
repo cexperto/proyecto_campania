@@ -8,14 +8,17 @@ from users.models import Users
 from rest_framework import generics, status
 from .serializer import AllUserSerializer
 from django_filters.rest_framework import DjangoFilterBackend
-from .utils import render_to_pdf
+from .utils import render_to_pdf, send_email
 from django.http import HttpResponse
+import boto3
+
+s3 = boto3.resource('s3')
 
 
 def home(request):
     return HttpResponse("Welcome to the API!")
 
-class UserRegisterList(APIView):    
+class UserRegisterList(APIView):
     # def get(self, request, format=None):
     #     users = Users.objects.all()
     #     serializer = UserSerializer(users, many=True)
@@ -24,7 +27,9 @@ class UserRegisterList(APIView):
     def post(self, request, format=None):
         serializer = AllUserSerializer(data=request.data)
         if serializer.is_valid():
-            serializer.save()
+            correo = request.data['correo']            
+            # serializer.save()
+            send_email(correo)
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
